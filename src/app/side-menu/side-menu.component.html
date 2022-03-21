@@ -1,0 +1,12 @@
+<div class="h-[100vh] w-[80%] p-3 side-menu">
+    <div class="user h-[200px]"></div>
+    <hr class="mx-4">
+   <ul class="grid grid-cols-1 gap-[35px]">
+       <li *ngFor="let item of sideMenulist" class="side-bar-li grid grid-cols-10 items-center justify-items-start hover:text-white hover:scale-[1.02] cursor-pointer" routerLink="{{item.route}}">
+           <fa-icon [icon]="item.icon" class="m-auto col-start-2"></fa-icon>
+           <h2 class="text-lg col-start-3 col-span-3 pl-2">
+               {{item.title}} 
+           </h2>
+       </li>
+   </ul>
+</div>

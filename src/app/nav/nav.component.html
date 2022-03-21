@@ -1,0 +1,7 @@
+<ul class="grid grid-cols-10">
+    <li *ngFor="let item of nav" class="nav-bar-li hover:text-[#576595] cursor-pointer hover:scale-[1.02]" routerLink="{{item.route}}">
+        <p>
+            {{item.title}}
+        </p>
+    </li>
+</ul>

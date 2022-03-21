@@ -1,3 +1,9 @@
-
-<button
-  class="bg-slate-400 p-[5px]">Hello</button>
+<div class="grid grid-cols-12">
+    <app-side-menu class="col-span-3"></app-side-menu>
+    <div class="col-span-9 pr-[20px]">
+        <app-header></app-header>
+        <div class="my-[30px]">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
