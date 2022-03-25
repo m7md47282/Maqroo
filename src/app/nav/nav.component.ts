@@ -6,26 +6,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.sass']
 })
 export class NavComponent implements OnInit {
+  width!: number;
+  left!: number;
+  opacity: number = 0;
+
   nav = [
     {
       title: "Home",
-      route:"/home",
+      route: "/home",
     },
     {
       title: "Explor",
-      route:"/home",
+      route: "/explor",
     },
     {
       title: "Followers",
-      route:"/home",
+      route: "/followers",
     },
     {
       title: "Library",
-      route:"/home",
+      route: "/library",
     },
   ]
 
-  constructor() { }
+  constructor() {
+  }
+
+  getOffset = (event: any) => {
+    this.left = event.srcElement.offsetLeft;
+    this.width = event.srcElement.offsetWidth;
+    this.opacity = 1;
+  }
+
+  goOff = () => {
+    this.opacity = 0;
+    this.left = 0;
+    this.width = 0;
+  }
 
   ngOnInit(): void {
   }

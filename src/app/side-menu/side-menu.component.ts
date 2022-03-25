@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faBookmark, faCompass, faHome, faUsers, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { IMenu } from './menuInterface';
+import { IMenu } from '../../interfaces/menuInterface';
 
 @Component({
   selector: 'app-side-menu',

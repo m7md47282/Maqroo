@@ -1,7 +1,8 @@
-<ul class="grid grid-cols-10">
-    <li *ngFor="let item of nav" class="nav-bar-li hover:text-[#576595] cursor-pointer hover:scale-[1.02]" routerLink="{{item.route}}">
-        <p>
+<ul class="grid grid-cols-10 relative" id="nav-container" (mouseleave)="goOff()">
+    <li *ngFor="let item of nav" class="nav-bar-li" routerLink="{{item.route}}">
+        <p (mouseover)="getOffset($event)" class="hover:text-[#576595] cursor-pointer hover:scale-[1.02]" >
             {{item.title}}
         </p>
     </li>
+    <span class="hover-border absolute h-[2px] rounded bottom-0" [ngStyle]="{'width': width + 'px', 'left': left + 'px', 'opacity': opacity}"></span>
 </ul>
