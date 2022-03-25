@@ -9,6 +9,7 @@ import { DefaultComponent } from './layout/default/default.component';
 import { BooksComponent } from './books/books.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavComponent } from './nav/nav.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavComponent } from './nav/nav.component';
     SideMenuComponent,
     DefaultComponent,
     BooksComponent,
-    NavComponent
+    NavComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
